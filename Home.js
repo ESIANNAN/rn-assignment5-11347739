@@ -1,13 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+
 
 const sentImage = require('./assets/sent.png');
 const receiveImage = require('./assets/receive.png');
 const loanImage = require('./assets/Loan.png');
 const topUpImage = require('./assets/Topup.png');
 
+
 export default function App() {
   return (
+<ScrollView contentContainerStyle={styles.scrollContainer}>
 <View style={styles.container}>
     <View style={styles.profileContainer}>
       <Text style={styles.welcomeText}>Welcome back,</Text>
@@ -15,23 +18,31 @@ export default function App() {
       
     </View>
     <Image source={require('./assets/CREDIT CARD.png')}style={styles.creditIcon} resizeMode='contain' />
-   <View style={styles.tabContainer}>
+
+    <View style={styles.tabContainer}>
         <TabButton image={sentImage} label="Sent" />
         <TabButton image={receiveImage} label="Receive" />
         <TabButton image={loanImage} label="Loan" />
         <TabButton image={topUpImage} label="Top Up" />
     </View>
+
+    <View style={styles.transactionActivity}>
+        <Text style={styles.transaction}>Transaction</Text>
+        <Text style={styles.seeText}>See All</Text>
+    </View>
+    
     <StatusBar style="auto" /> 
 </View>
+</ScrollView>
   );
 }
-const TabButton = ({ image, label }) => (
-    <TouchableOpacity style={styles.tab}>
-      <Image source={image} style={styles.tabImage} resizeMode="contain" />
-      <Text style={styles.tabText}>{label}</Text>
-    </TouchableOpacity>
-  );
 
+const TabButton = ({ image, label }) => (
+  <TouchableOpacity style={styles.tab}>
+    <Image source={image} style={styles.tabImage} resizeMode="contain" />
+    <Text style={styles.tabText}>{label}</Text>
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -41,20 +52,20 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     marginTop: 120,
   },
-   profileContainer: {
-    marginLeft: -60,
+  profileContainer: {
+    marginLeft: 40,
   },
-    welcomeText: {
+  welcomeText: {
     fontSize: 24, 
     color: 'grey',
   },
   name: {
     fontSize: 28,
   },
-    creditIcon: {
+  creditIcon: {
     marginTop: 40,
   },
-   tabContainer: {
+  tabContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 10,
@@ -73,4 +84,17 @@ const styles = StyleSheet.create({
     color: '#333',
     fontWeight: 'bold',
   },
+  transactionActivity: {
+    flexDirection: 'row',
+    marginLeft: 25,
+  },
+  transaction: {
+    fontSize: 28,
+  },
+  seeText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#007FFF',
+  },
+  
 });
