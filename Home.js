@@ -22,4 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     marginTop: 120,
   },
+   profileContainer: {
+    marginLeft: -60,
+  },
 });
