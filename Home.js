@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   },
     welcomeText: {
     fontSize: 24, 
+    color: 'grey',
   },
   name: {
     fontSize: 28,
