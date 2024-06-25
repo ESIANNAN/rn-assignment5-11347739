@@ -41,15 +41,19 @@ const tasks = [
     </View>
     
  <FlatList
-          data={tasks}
-          renderItem={({ item }) => (
-            <View style={styles.taskBox}>
-             <Image source={item.image} style={styles.taskImage} />
-              <Text style={styles.task}>{item.title}</Text>
-            </View>
-          )}
-          keyExtractor={item => item.id}
-        />
+  data={tasks}
+  renderItem={({ item }) => (
+    <View style={styles.taskBox}>
+      <Image source={item.image} style={styles.taskImage} />
+      <View>
+        <Text style={styles.task}>{item.title}</Text>
+        <Text style={styles.taskDetails}>{item.category}</Text>
+      </View>
+      <Text style={styles.taskCost}>{item.cost}</Text>
+    </View>
+  )}
+  keyExtractor={item => item.id}
+/>
 
     <StatusBar style="auto" /> 
 </View>
