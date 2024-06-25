@@ -25,4 +25,10 @@ const styles = StyleSheet.create({
    profileContainer: {
     marginLeft: -60,
   },
+    welcomeText: {
+    fontSize: 24, 
+  },
+  name: {
+    fontSize: 28,
+  },
 });
