@@ -11,11 +11,11 @@ const topUpImage = require('./assets/Topup.png');
 export default function App() {
     
 const tasks = [
-    { id: '1', title: 'Apple' category: 'Entertainment',cost: '-$5.99'},
-    { id: '2', title: 'Spotify' },
-    { id: '3', title: 'Money Transfer' },
-    { id: '4', title: 'Grocery' },
-    { id: '5', title: 'Netflix' },
+ { id: '1', title: 'Apple',category: 'Entertainment',cost: '-$5.99' },
+    { id: '2', title: 'Spotify',category: 'Music',cost: '-$12.99' },
+    { id: '3', title: 'Money Transfer',category: 'Transaction',cost: '$300' },
+    { id: '4', title: 'Grocery',category: 'Payment',cost: '-$88' },
+    { id: '5', title: 'Netflix',category: 'Payment',cost: '$10' },
   ];
     
   return (
