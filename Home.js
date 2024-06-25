@@ -123,21 +123,37 @@ const styles = StyleSheet.create({
     color: '#007FFF',
     marginTop: 8,
   },
-    taskBox: {
+   taskBox: {
     flexDirection: 'row',
     backgroundColor: 'yellow',
     borderRadius: 15,
     marginBottom: 10,
     marginTop: 12,
-    padding: 40,
+    padding: 20,
     width: 350,
-    Height: 200,
     marginLeft: 12,
+    alignItems: 'center',
+  },
+  taskImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
   },
   task: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginLeft: 10,
+    marginLeft:-40,
+  },
+  taskDetails: {
+    fontSize: 14,
+    color: 'grey',
+    marginLeft: -40,
+  },
+  taskCost: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 'auto',
+    color: '#007FFF' ,
   },
   
 });
