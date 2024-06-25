@@ -33,4 +33,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 28,
   },
+    creditIcon: {
+    marginTop: 40,
+  },
 });
