@@ -3,13 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-  <View style={styles.container}>
+<View style={styles.container}>
     <View style={styles.profileContainer}>
       <Text style={styles.welcomeText}>Welcome back,</Text>
       <Text style={styles.name}>Philomina Annan</Text>
-      <StatusBar style="auto" />
+      
     </View>
-     
+    <Image source={require('./assets/CREDIT CARD.png')}style={styles.creditIcon} resizeMode='contain' />
+    <StatusBar style="auto" /> 
 </View>
   );
 }
