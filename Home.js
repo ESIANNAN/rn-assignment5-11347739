@@ -119,5 +119,21 @@ const styles = StyleSheet.create({
     color: '#007FFF',
     marginTop: 8,
   },
+    taskBox: {
+    flexDirection: 'row',
+    backgroundColor: 'yellow',
+    borderRadius: 15,
+    marginBottom: 10,
+    marginTop: 12,
+    padding: 40,
+    width: 350,
+    Height: 200,
+    marginLeft: 12,
+  },
+  task: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
   
 });
