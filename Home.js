@@ -11,7 +11,7 @@ const topUpImage = require('./assets/Topup.png');
 export default function App() {
     
 const tasks = [
-    { id: '1', title: 'Apple' },
+    { id: '1', title: 'Apple' category: 'Entertainment',cost: '-$5.99'},
     { id: '2', title: 'Spotify' },
     { id: '3', title: 'Money Transfer' },
     { id: '4', title: 'Grocery' },
