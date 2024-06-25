@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, FlatList } from 'react-native';
 
 
 const sentImage = require('./assets/sent.png');
@@ -9,6 +9,15 @@ const topUpImage = require('./assets/Topup.png');
 
 
 export default function App() {
+    
+const tasks = [
+    { id: '1', title: 'Apple' },
+    { id: '2', title: 'Spotify' },
+    { id: '3', title: 'Money Transfer' },
+    { id: '4', title: 'Grocery' },
+    { id: '5', title: 'Netflix' },
+  ];
+    
   return (
 <ScrollView contentContainerStyle={styles.scrollContainer}>
 <View style={styles.container}>
@@ -17,7 +26,7 @@ export default function App() {
       <Text style={styles.name}>Philomina Annan</Text>
       
     </View>
-    <Image source={require('./assets/CREDIT CARD.png')}style={styles.creditIcon} resizeMode='contain' />
+    <Image source={require('./assets/credit-card.png')}style={styles.creditIcon} resizeMode='contain' />
 
     <View style={styles.tabContainer}>
         <TabButton image={sentImage} label="Sent" />
@@ -31,6 +40,17 @@ export default function App() {
         <Text style={styles.seeText}>See All</Text>
     </View>
     
+ <FlatList
+          data={tasks}
+          renderItem={({ item }) => (
+            <View style={styles.taskBox}>
+             <Image source={item.image} style={styles.taskImage} />
+              <Text style={styles.task}>{item.title}</Text>
+            </View>
+          )}
+          keyExtractor={item => item.id}
+        />
+
     <StatusBar style="auto" /> 
 </View>
 </ScrollView>
