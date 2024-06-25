@@ -141,12 +141,12 @@ const styles = StyleSheet.create({
     padding: 30,
   },
   task: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     marginLeft:10,
   },
   taskDetails: {
-    fontSize: 18,
+    fontSize: 16,
     color: 'grey',
     marginLeft: 10,
   },
