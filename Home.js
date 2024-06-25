@@ -1,5 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+
+const sentImage = require('./assets/sent.png');
+const receiveImage = require('./assets/receive.png');
+const loanImage = require('./assets/Loan.png');
+const topUpImage = require('./assets/Topup.png');
 
 export default function App() {
   return (
@@ -10,10 +15,23 @@ export default function App() {
       
     </View>
     <Image source={require('./assets/CREDIT CARD.png')}style={styles.creditIcon} resizeMode='contain' />
+   <View style={styles.tabContainer}>
+        <TabButton image={sentImage} label="Sent" />
+        <TabButton image={receiveImage} label="Receive" />
+        <TabButton image={loanImage} label="Loan" />
+        <TabButton image={topUpImage} label="Top Up" />
+    </View>
     <StatusBar style="auto" /> 
 </View>
   );
 }
+const TabButton = ({ image, label }) => (
+    <TouchableOpacity style={styles.tab}>
+      <Image source={image} style={styles.tabImage} resizeMode="contain" />
+      <Text style={styles.tabText}>{label}</Text>
+    </TouchableOpacity>
+  );
+
 
 const styles = StyleSheet.create({
   container: {
@@ -35,5 +53,24 @@ const styles = StyleSheet.create({
   },
     creditIcon: {
     marginTop: 40,
+  },
+   tabContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 20,
+    width: '100%',
+  },
+  tab: {
+    alignItems: 'center',
+  },
+  tabImage: {
+    width: 80,
+    height: 80,
+    marginBottom: 10,
+  },
+  tabText: {
+    fontSize: 16,
+    color: '#333',
+    fontWeight: 'bold',
   },
 });
