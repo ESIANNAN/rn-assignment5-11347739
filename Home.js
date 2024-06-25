@@ -87,14 +87,17 @@ const styles = StyleSheet.create({
   transactionActivity: {
     flexDirection: 'row',
     marginLeft: 25,
+    marginTop: 20,
   },
   transaction: {
     fontSize: 28,
+    marginRight: 100,
   },
   seeText: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#007FFF',
+    marginTop: 8,
   },
   
 });
