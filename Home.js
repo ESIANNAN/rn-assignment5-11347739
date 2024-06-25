@@ -3,11 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Welcome back,</Text>
-      <Text>Philomina Annan</Text>
+  <View style={styles.container}>
+    <View style={styles.profileContainer}>
+      <Text style={styles.welcomeText}>Welcome back,</Text>
+      <Text style={styles.name}>Philomina Annan</Text>
       <StatusBar style="auto" />
     </View>
+     
+</View>
   );
 }
 
