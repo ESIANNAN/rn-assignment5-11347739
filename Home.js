@@ -142,12 +142,12 @@ const styles = StyleSheet.create({
   task: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginLeft:-40,
+     marginLeft:10,
   },
   taskDetails: {
     fontSize: 14,
     color: 'grey',
-    marginLeft: -40,
+     marginLeft:10,
   },
   taskCost: {
     fontSize: 16,
