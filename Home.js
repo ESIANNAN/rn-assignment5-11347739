@@ -146,8 +146,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 12,
         padding: 8,
-        width: 350,
-        marginLeft: 5,
+        width: 340,
+        marginLeft: 20,
         alignItems: 'center',
     },
     taskImage: {
