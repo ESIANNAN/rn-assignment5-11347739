@@ -128,17 +128,17 @@ const styles = StyleSheet.create({
         marginLeft: 25,
         marginTop: 20,
     },
-    transaction: {
+ transaction: {
         fontSize: 28,
         marginRight: 100,
-        marginTop: 30,
+        marginTop: 10,
         fontWeight: 'bold',
     },
     seeText: {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#007FFF',
-        marginTop: 36,
+        marginTop: 20,
     },
     taskBox: {
         flexDirection: 'row',
