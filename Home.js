@@ -8,6 +8,7 @@ const loanImage = require('./assets/Loan.png');
 const topUpImage = require('./assets/Topup.png');
 
 
+
 export default function App() {
     
 const tasks = [
@@ -21,6 +22,8 @@ const tasks = [
   return (
 <ScrollView contentContainerStyle={styles.scrollContainer}>
 <View style={styles.container}>
+
+
     <View style={styles.profileContainer}>
       <Text style={styles.welcomeText}>Welcome back,</Text>
       <Text style={styles.name}>Philomina Annan</Text>
@@ -54,6 +57,7 @@ const tasks = [
   )}
   keyExtractor={item => item.id}
 />
+ 
 
     <StatusBar style="auto" /> 
 </View>
@@ -116,29 +120,31 @@ const styles = StyleSheet.create({
   transaction: {
     fontSize: 28,
     marginRight: 100,
+    marginTop: 30,
+    fontWeight: 'bold',
   },
   seeText: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#007FFF',
-    marginTop: 8,
+    marginTop: 36,
   },
-  taskBox: {
+   taskBox: {
     flexDirection: 'row',
     borderRadius: 15,
     marginBottom: 10,
     marginTop: 12,
-    padding: 20,
+    padding: 8,
     width: 350,
     marginLeft: 5,
     alignItems: 'center',
   },
   taskImage: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
     borderRadius: 40,
     backgroundColor: '#eeeeee',
-    padding: 30,
+    padding: 25,
   },
   task: {
     fontSize: 18,
@@ -157,4 +163,5 @@ const styles = StyleSheet.create({
     color: 'black' ,
   },
   
+
 });
