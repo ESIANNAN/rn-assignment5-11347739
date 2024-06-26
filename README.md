@@ -22,3 +22,5 @@ PROCESS OF BUILDING THE APP:
 ![Screenshot 2024-06-26 194858](https://github.com/ESIANNAN/rn-assignment5-11347739/assets/150846223/9a1a87e7-5814-4d55-97af-cf1405ef5049)
 ![Screenshot 2024-06-26 180551](https://github.com/ESIANNAN/rn-assignment5-11347739/assets/150846223/32ada249-13c7-4587-8e57-55495927f4aa)
 ![Screenshot 2024-06-26 180611](https://github.com/ESIANNAN/rn-assignment5-11347739/assets/150846223/f7353657-1541-4361-8a99-5d2412d56756)
+![Screenshot 2024-06-26 195254](https://github.com/ESIANNAN/rn-assignment5-11347739/assets/150846223/e76c6955-4d76-4705-b169-2df2e190d92a)
+
