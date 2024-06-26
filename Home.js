@@ -101,7 +101,8 @@ const styles = StyleSheet.create({
         fontSize: 28,
     },
     creditIcon: {
-        marginTop: 40,
+         marginTop: 20,
+        marginLeft: 10,
     },
     tabContainer: {
         flexDirection: 'row',
