@@ -7,6 +7,7 @@ const sentImage = require('./assets/sent.png');
 const receiveImage = require('./assets/receive.png');
 const loanImage = require('./assets/Loan.png');
 const topUpImage = require('./assets/Topup.png');
+const searchIcon = require('./assets/search.png');
 
 const tasks = [
     { id: '1', title: 'Apple', image: require('./assets/apple.png'), category: 'Entertainment', cost: '-$5.99' },
@@ -25,9 +26,14 @@ export default function Home() {
                 <View style={styles.profileContainer}>
                     <View style={styles.profileInfo}>
                         <Image source={require('./assets/DEDE.JPG')} style={styles.profileIcon} />
-                        <Text style={styles.welcomeText}>Welcome back,</Text>
-                        <Text style={styles.name}>Philomina Annan</Text>
+                        <View>
+                            <Text style={styles.welcomeText}>Welcome back,</Text>
+                            <Text style={styles.name}>Philomina Annan</Text>
+                        </View>
                     </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('Search')}>
+                        <Image source={searchIcon} style={styles.searchIcon} />
+                    </TouchableOpacity>
                 </View>
                 <Image source={require('./assets/credit-card.png')} style={styles.creditIcon} resizeMode='contain' />
                 <View style={styles.tabContainer}>
@@ -39,7 +45,7 @@ export default function Home() {
                 <View style={styles.transactionActivity}>
                     <Text style={styles.transaction}>Transaction</Text>
                     <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
-                        <Text style={styles.seeText}>See All</Text>
+                        <Text style={styles.seeText}>Sell All</Text>
                     </TouchableOpacity>
                 </View>
                 <FlatList
@@ -95,24 +101,36 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginLeft: 40,
+        marginLeft: 20,
         marginTop: 20,
         marginBottom: 10,
+        width: '100%',
     },
     profileInfo: {
-        alignItems: 'flex-start',
+        flexDirection: 'row',
     },
     welcomeText: {
-        fontSize: 24,
+        fontSize: 22,
         color: 'grey',
+        marginTop:10 ,
+        marginLeft: 10,
     },
     name: {
-        fontSize: 28,
+        fontSize: 25,
+        marginLeft:10,
     },
     profileIcon: {
-        width: 70,
+        width: 60,
         height: 70,
         borderRadius: 35,
+    },
+    searchIcon: {
+        width: 40,
+        height: 40,
+        marginRight: 40,
+        backgroundColor: '#eeeeee',
+        borderRadius: 40,
+        padding: 10,
     },
     creditIcon: {
         marginTop: 20,
@@ -143,23 +161,23 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
     transaction: {
-        fontSize: 28,
+        fontSize: 26,
         marginRight: 100,
-        marginTop: 10,
+        marginTop: 5,
         fontWeight: 'bold',
     },
     seeText: {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#007FFF',
-        marginTop: 20,
+        marginTop: 13,
     },
     taskBox: {
         flexDirection: 'row',
         borderRadius: 15,
         marginBottom: 10,
         marginTop: 12,
-        padding: 5,
+        padding: 8,
         width: 340,
         marginLeft: 20,
         alignItems: 'center',
