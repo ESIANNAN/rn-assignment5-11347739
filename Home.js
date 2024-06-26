@@ -187,9 +187,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     bottomBarIcon: {
-        width: 30,
-        height: 30,
-        marginBottom: 5,
+        width: 20,
+        height: 20,
+        marginBottom: 0,
     },
     bottomBarText: {
         fontSize: 14,
