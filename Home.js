@@ -1,9 +1,7 @@
-// Home.js
-
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, FlatList } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
+import { useNavigation } from '@react-navigation/native';
 
 const sentImage = require('./assets/sent.png');
 const receiveImage = require('./assets/receive.png');
@@ -19,15 +17,17 @@ const tasks = [
 ];
 
 export default function Home() {
-    const navigation = useNavigation(); // Initialize navigation
+    const navigation = useNavigation();
 
     return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
             <View style={styles.container}>
                 <View style={styles.profileContainer}>
-                <Image source={require('./assets/DEDE.JPG')} styles={ styles.profileIcon}/>
-                    <Text style={styles.welcomeText}>Welcome back,</Text>
-                    <Text style={styles.name}>Philomina Annan</Text>
+                    <View style={styles.profileInfo}>
+                        <Image source={require('./assets/DEDE.JPG')} style={styles.profileIcon} />
+                        <Text style={styles.welcomeText}>Welcome back,</Text>
+                        <Text style={styles.name}>Philomina Annan</Text>
+                    </View>
                 </View>
                 <Image source={require('./assets/credit-card.png')} style={styles.creditIcon} resizeMode='contain' />
                 <View style={styles.tabContainer}>
@@ -92,7 +92,15 @@ const styles = StyleSheet.create({
         marginTop: 0,
     },
     profileContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         marginLeft: 40,
+        marginTop: 20,
+        marginBottom: 10,
+    },
+    profileInfo: {
+        alignItems: 'flex-start',
     },
     welcomeText: {
         fontSize: 24,
@@ -101,8 +109,13 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 28,
     },
+    profileIcon: {
+        width: 70,
+        height: 70,
+        borderRadius: 35,
+    },
     creditIcon: {
-         marginTop: 20,
+        marginTop: 20,
         marginLeft: 10,
     },
     tabContainer: {
@@ -129,7 +142,7 @@ const styles = StyleSheet.create({
         marginLeft: 25,
         marginTop: 20,
     },
- transaction: {
+    transaction: {
         fontSize: 28,
         marginRight: 100,
         marginTop: 10,
@@ -146,10 +159,11 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginBottom: 10,
         marginTop: 12,
-        padding: 8,
+        padding: 5,
         width: 340,
         marginLeft: 20,
         alignItems: 'center',
+        backgroundColor: '#f8f9fa',
     },
     taskImage: {
         width: 30,
@@ -193,7 +207,7 @@ const styles = StyleSheet.create({
         marginBottom: 0,
     },
     bottomBarText: {
-        fontSize: 14,
+        fontSize: 12,
         color: '#666',
     },
     scrollContainer: {
