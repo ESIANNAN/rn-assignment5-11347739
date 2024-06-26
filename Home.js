@@ -58,6 +58,23 @@ const tasks = [
   keyExtractor={item => item.id}
 />
  
+  <View style={styles.bottomBar}>
+          <TouchableOpacity style={styles.bottomBarItem}>
+            <Image source={require('./assets/Home-tab.png')} style={styles.bottomBarIcon} />
+            <Text style={styles.bottomBarText}>Home</Text>
+          </TouchableOpacity>
+         
+          <TouchableOpacity style={styles.bottomBarItem}>
+            <Image source={require('./assets/Statistics.png')} style={styles.bottomBarIcon} />
+            <Text style={styles.bottomBarText}>Statistics</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.bottomBarItem}>
+            <Image source={require('./assets/Settings.png')} style={styles.bottomBarIcon} />
+            <Text style={styles.bottomBarText}>Settings</Text>
+          </TouchableOpacity>
+        </View>
+    
+    
 
     <StatusBar style="auto" /> 
 </View>
@@ -78,7 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    marginTop: 120,
+    marginTop: 100,
   },
   profileContainer: {
     marginLeft: 40,
@@ -162,6 +179,27 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     color: 'black' ,
   },
-  
+   bottomBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: '#f2f2f2',
+    paddingVertical: 10,
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+  },
+  bottomBarItem: {
+    alignItems: 'center',
+  },
+  bottomBarIcon: {
+    width: 30,
+    height: 30,
+    marginBottom: 5,
+  },
+  bottomBarText: {
+    fontSize: 12,
+    color: '#666',
+  },
 
 });
