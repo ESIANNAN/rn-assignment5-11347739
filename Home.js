@@ -25,6 +25,7 @@ export default function Home() {
         <ScrollView contentContainerStyle={styles.scrollContainer}>
             <View style={styles.container}>
                 <View style={styles.profileContainer}>
+                <Image source={require('./assets/DEDE.JPG')} styles={ styles.profileIcon}/>
                     <Text style={styles.welcomeText}>Welcome back,</Text>
                     <Text style={styles.name}>Philomina Annan</Text>
                 </View>
